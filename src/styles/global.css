@@ -1,1 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 @import "tailwindcss";
+
+@theme inline {
+    --font-sans: "Montserrat",
+    system-ui;
+    --couleur-text-1: var(--clr-text-un);
+    --couleur-text-2: var(--clr-text-deux);
+    --couleur-bg-haut: var(--clr-bg-haut);
+    --couleur-bg-bas: var(--clr-bg-bas);
+}
+
+@layer base {
+    :root {
+        --clr-white: white;
+        --clr-blue: oklch(0.281 0.0924 268.13);
+
+        --clr-text-un: var(--clr-white);
+        --clr-text-deux: var(--clr-blue);
+
+        --clr-primary-gradient: oklch(77.509% 0.09714 280.619);
+        --clr-secondary-gradent: oklch(53.699% 0.19382 275.399);
+
+        --clr-bg-haut: var(--clr-primary-gradient);
+        --clr-bg-bas: var(--clr-secondary-gradent);
+    }
+}

@@ -1,0 +1,18 @@
+---
+const{title, price1, price2, price3, TB1, TB2, GB, user1, user2, user3, send1, send2, send3, highlight=false } = Astro.props
+
+const altCard= highlight? "text-(--clr-text-un) bg-gradient-to-br from-(--clr-bg-haut) to-(--clr-bg-bas) h-[27rem]":""
+const space= highlight? "mt-4":""
+const buttonAlt = highlight? "text-white border-white hover:text-red-500 hover:bg-white":""
+---
+
+<div class={`text-(--clr-text-deux) rounded-md bg-white pt-7 w-80 text-center pb-7 shadow-2xl h-[25rem] ${altCard}`}>
+    <h2 class={`font-semibold ${space}`}>{title}</h2>
+    <p class="font-bold text-5xl pt-5 pb-5"><span class="text-3xl pr-3 align-middle">$</span>{price1}{price2}{price3}</p>
+    <p class="border-t-1 border-b-1 mr-5 ml-5 pt-3 pb-3 font-semibold">{TB1}{TB2}{GB} Storage</p>
+    <p class="border-b-1 mr-5 ml-5 pt-3 pb-3 font-semibold">{user1}{user2}{user3} Users Allowed</p>
+    <p class="border-b-1 mr-5 ml-5 pt-3 pb-3 font-semibold">Send up to {send1}{send2}{send3} GB</p>
+    <button class={`bg-transparent hover:bg-blue-500 text-blue-950 font-semibold hover:text-white pt-2 pb-2 mt-8 pr-20 pl-20 border border-blue-950 hover:border-transparent rounded ${buttonAlt}`}>
+        LEARN MORE
+      </button>
+</div>

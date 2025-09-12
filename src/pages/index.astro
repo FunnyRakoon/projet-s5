@@ -1,7 +1,17 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro"
+import Card from "../components/Card.astro"
 ---
 
 <BaseLayout title="Page Astro">
-	<h1>test2</h1>
+	
+	<h1 class="text-center font-Montserrat tracking-wide font-semibold text-3xl pt-20 mb-20 text-opacity-50">Our Pricing</h1>
+
+
+	<div class="flex items-center place-content-center">
+		<Card title="Basic" price1="19.99" GB="500 GB" user1="2" send1="3"/>
+		<Card title="Professional" price2="24.99" TB1="1 TB" user2="5" send2="10" highlight={true}/>
+		<Card title="Master" price3="39.99" TB2="2 TB" user3="10" send3="20"/>
+	</div>
+</div>
 </BaseLayout>
